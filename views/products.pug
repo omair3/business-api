@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1 Products
+  a(href=`/admin/products/add`) Add New Product
+  ul
+    each product in items
+      li
+        | #{product.name} - $#{product.price}
+        form(method="POST", action=`/admin/products/delete/${product._id}`)
+          button(type="submit") Delete

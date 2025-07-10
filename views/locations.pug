@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1 Locations
+  a(href=`/admin/locations/add`) Add New Location
+  ul
+    each location in items
+      li
+        | #{location.name} - #{location.address} - #{location.phone}
+        form(method="POST", action=`/admin/locations/delete/${location._id}`)
+          button(type="submit") Delete

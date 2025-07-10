@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1 Services
+  a(href=`/admin/services/add`) Add New Service
+  ul
+    each service in items
+      li
+        | #{service.name} - #{service.description} - $#{service.price}
+        form(method="POST", action=`/admin/services/delete/${service._id}`)
+          button(type="submit") Delete
