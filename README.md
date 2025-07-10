@@ -47,13 +47,10 @@ cd business-api
 Install the dependencies:
 npm install
 
-Create a .env file in the root of your project folder with the following contents (replace with your actual MongoDB URI):
-MONGODB_URI=your-mongodb-uri
-PORT=3000
+copy the  .env file in the root of project folder
 
 Start the server:
-npm start
-
+npm start or node app.js
 Open your browser and visit these routes:
 http://localhost:3000/ – Homepage
 http://localhost:3000/api/products – View all products
